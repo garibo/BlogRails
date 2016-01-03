@@ -1,0 +1,5 @@
+<h1>Valores:</h1>
+<% @articles.each do |article| %>
+	<h1><%= link_to article.title, article%></h1>
+	<p><%=article.body%> - <%= link_to "Eliminar", article, class:"red", method: :delete%></p>
+<%end%>
