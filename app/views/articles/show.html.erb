@@ -3,6 +3,11 @@
 <p>
 	Escrito por: <%= @article.user.email %>
 </p>
+<div class="field">
+	<% @article.categories.each do |category| %>
+		<%= link_to "##{category.name}", category, style:"color:#{category.color};" %>
+	<% end %>
+</div>
 <% end %>
 <div class="field">
 	<%= image_tag @article.cover.url() %>
